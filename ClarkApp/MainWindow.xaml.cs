@@ -13,7 +13,7 @@ namespace ClarkApp
     /// </summary>
     public partial class MainWindow : Window
     {
-
+        //for test git commit
         string[] _linesArray;
         int _currentIndex = -1;
         public MainWindow()
