@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<formula>
+  <bankoffice name="Update Saving Plans Bank Office" target="GenericScreen_SpFund_SavingPlans">
+    <inputType>text</inputType>
+    <labelText>Bank Office</labelText>
+    <sql>
+      UPDATE SPS_PERIODIC
+      SET SPS_PERIODIC_CUSTOMFIELD2 = $2Input,
+      GO_USER_LASTUPDATED_BY_ID = $donebyUserId
+      WHERE SPS_PERIODIC_ID = $primaryId
+
+      DECLARE @DepartmentID INT
+      SELECT @DepartmentID = GO_DEPARTMENT_ID
+      FROM GO_DEPARTMENT
+      WHERE GO_DEPARTMENT_ACTIVE = 1 
+      AND GO_DEPARTMENT_EXTERNALID = $input
+
+      IF @DepartmentID IS NOT NULL
+      BEGIN
+	      DECLARE @UserID INT
+	      SELECT @UserID = GO_USER_ID FROM GO_USER
+	      WHERE GO_DEPARTMENT_ID = @DepartmentID
+	      AND GO_USER_ACTIVE = 1
+
+	      IF @UserID IS NULL RAISERROR (N'The User is not existing.', 18,1, NULL,0) 
+	      ELSE
+	      BEGIN
+		      DECLARE @DistributorID INT
+		      SELECT @DistributorID = DPT.TRX_DISTRIBUTOR_ID 
+		      FROM GO_DEPARTMENT DPT
+		      INNER JOIN TRX_DISTRIBUTOR DIS ON DPT.TRX_DISTRIBUTOR_ID = DIS.TRX_DISTRIBUTOR_ID
+		      WHERE GO_DEPARTMENT_ID = @DepartmentID
+		      AND TRX_DISTRIBUTOR_ACTIVE = 1
+
+		      IF @DistributorID IS NULL RAISERROR (N'The Distributor is not existing.', 18,1, NULL,0) 
+		      ELSE
+		      BEGIN
+			      UPDATE TXI_USERSHARING
+			      SET GO_DEPARTMENT_ID = @DepartmentID,
+			      GO_USER_ID = @UserID,
+			      TRX_DISTRIBUTOR_ID = @DistributorID
+			      WHERE TXI_USERSHARING_TABLE = 'SPS_PERIODIC'
+			      AND TXI_USERSHARING_FOREIGNKEY = $primaryId
+		      END
+	      END
+      END
+      ELSE
+      BEGIN
+	      RAISERROR (N'The Department is not existing.', 18,1, NULL,0) 
+      END
+    </sql>
+  </bankoffice>
+  <salesperson name="Update Saving Plans Sales Person" target="GenericScreen_SpFund_SavingPlans">
+    <inputType>text</inputType>
+    <labelText>Department External ID</labelText>
+    <sql>
+      UPDATE SPS_PERIODIC
+      SET SPS_PERIODIC_CUSTOMFIELD2 = $Input,
+      GO_USER_LASTUPDATED_BY_ID = $donebyUserId
+      WHERE SPS_PERIODIC_ID = $primaryId
+    </sql>
+  </salesperson>
+</formula>

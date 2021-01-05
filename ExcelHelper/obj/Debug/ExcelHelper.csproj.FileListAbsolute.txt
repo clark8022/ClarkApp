@@ -1,0 +1,14 @@
+C:\Tao\test\ClarkApp\ExcelHelper\bin\Debug\ExcelHelper.exe.config
+C:\Tao\test\ClarkApp\ExcelHelper\bin\Debug\ExcelHelper.exe
+C:\Tao\test\ClarkApp\ExcelHelper\bin\Debug\ExcelHelper.pdb
+C:\Tao\test\ClarkApp\ExcelHelper\obj\Debug\ExcelHelper.csprojAssemblyReference.cache
+C:\Tao\test\ClarkApp\ExcelHelper\obj\Debug\ExcelHelper.csproj.CoreCompileInputs.cache
+C:\Tao\test\ClarkApp\ExcelHelper\obj\Debug\ExcelHelper.exe
+C:\Tao\test\ClarkApp\ExcelHelper\obj\Debug\ExcelHelper.pdb
+C:\Tao\ClarkApp\ClarkApp\ExcelHelper\bin\Debug\ExcelHelper.exe.config
+C:\Tao\ClarkApp\ClarkApp\ExcelHelper\bin\Debug\ExcelHelper.exe
+C:\Tao\ClarkApp\ClarkApp\ExcelHelper\bin\Debug\ExcelHelper.pdb
+C:\Tao\ClarkApp\ClarkApp\ExcelHelper\obj\Debug\ExcelHelper.csprojAssemblyReference.cache
+C:\Tao\ClarkApp\ClarkApp\ExcelHelper\obj\Debug\ExcelHelper.csproj.CoreCompileInputs.cache
+C:\Tao\ClarkApp\ClarkApp\ExcelHelper\obj\Debug\ExcelHelper.exe
+C:\Tao\ClarkApp\ClarkApp\ExcelHelper\obj\Debug\ExcelHelper.pdb

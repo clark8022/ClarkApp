@@ -1,0 +1,43 @@
+﻿<Window x:Class="ClarkApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClarkApp"
+        mc:Ignorable="d"
+        Title="194forever" Height="750" Width="1400">
+    <Grid>
+        <StackPanel>
+            <StackPanel>
+                <TextBlock Name="txtbShow" FontSize="288" Text="Ready~~~" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="WrapWithOverflow" Margin="10"></TextBlock>
+            </StackPanel>
+        </StackPanel>
+        <DockPanel LastChildFill="True" VerticalAlignment="Bottom">
+            <StackPanel>
+                <DockPanel Margin="10">
+                    <RadioButton x:Name="rb1" Content="表演猜词" GroupName="rbGrp" IsChecked="True"></RadioButton>
+                    <RadioButton x:Name="rb2" Content="描述猜词" GroupName="rbGrp"></RadioButton>
+                    <RadioButton x:Name="rb3" Content="团队猜词" GroupName="rbGrp"></RadioButton>
+                    <RadioButton x:Name="rb4" Content="比划猜词" GroupName="rbGrp"></RadioButton>
+                    <RadioButton x:Name="rb5" Content="惩罚办法" GroupName="rbGrp"></RadioButton>
+                </DockPanel>
+                <DockPanel Margin="10">
+                    <DockPanel>
+                        <Button Name="btnRunTest" Click="btnRunTest_Click" Content="Load" Margin="5" Width="50" Height="23" HorizontalAlignment="Right" VerticalAlignment="Bottom"  IsDefault="True"/>
+                        <Button Name="btnPrevious" Click="btnPrevious_Click" Content="Previous" Margin="5" Width="50" Height="23" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+                        <Button Name="btnNext" Click="btnNext_Click" Content="Next" Margin="5" Width="50" Height="23" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+                        
+                        <DatePicker Name="dpDate" Text="5/22/2016" />
+                    </DockPanel>
+                    <DockPanel Width="250" HorizontalAlignment="Right">
+                        <Label Content="Choose:" VerticalAlignment="Bottom"></Label>
+                        <TextBox x:Name="txtInput" Text="1" MinWidth="15" Width="50" Height="22" HorizontalAlignment="Right"></TextBox>
+                        <Button Name="btnPunish" Click="btnPunish_Click" Content="OMG" Margin="5" Width="50" Height="23" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+                        <Button Name="btnShow" Click="btnShow_Click" Content="ShowInfo" Margin="5" Width="80" Height="23" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+                    </DockPanel>
+                </DockPanel>
+                <RichTextBox x:Name="txtRichInfo" Margin="5" Height="auto" VerticalScrollBarVisibility="Visible" />
+            </StackPanel>
+        </DockPanel>
+    </Grid>
+</Window>

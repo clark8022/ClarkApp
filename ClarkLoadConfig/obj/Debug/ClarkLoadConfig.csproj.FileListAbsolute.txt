@@ -1,0 +1,6 @@
+C:\Tao\ClarkApp\ClarkApp\ClarkLoadConfig\bin\Debug\ClarkLoadConfig.dll
+C:\Tao\ClarkApp\ClarkApp\ClarkLoadConfig\bin\Debug\ClarkLoadConfig.pdb
+C:\Tao\ClarkApp\ClarkApp\ClarkLoadConfig\obj\Debug\ClarkLoadConfig.csprojAssemblyReference.cache
+C:\Tao\ClarkApp\ClarkApp\ClarkLoadConfig\obj\Debug\ClarkLoadConfig.csproj.CoreCompileInputs.cache
+C:\Tao\ClarkApp\ClarkApp\ClarkLoadConfig\obj\Debug\ClarkLoadConfig.dll
+C:\Tao\ClarkApp\ClarkApp\ClarkLoadConfig\obj\Debug\ClarkLoadConfig.pdb
